@@ -39,7 +39,7 @@ public class GameServices {
    
     //cache con los datos volatiles del juego
     @Autowired
-    GameStateRedisCache cache;
+    GameStateCache cache;
     
     //repositorios (capa de persistencia)
     @Autowired
