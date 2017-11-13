@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
  *
  * @author laura
  */
-@Service
+/*@Service*/
 public class GameStateRedisCache {
     @Autowired
     private StringRedisTemplate template;
