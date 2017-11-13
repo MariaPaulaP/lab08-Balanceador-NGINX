@@ -39,15 +39,15 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
     
     @Override
     public void configureMessageBroker(MessageBrokerRegistry config) {
-        /*CONFIGURACION ACTIVEMQ*/
-        config.enableStompBrokerRelay("/topic").setRelayHost(relayHost).setRelayPort(Integer.parseInt(relayPort));
+        /*CONFIGURACION ACTIVEMQ
+        config.enableStompBrokerRelay("/topic").setRelayHost(relayHost).setRelayPort(Integer.parseInt(relayPort));*/
         /*CONFIGURACION RABBITMQ*/
-        /*config.enableStompBrokerRelay("/topic/").setRelayHost(relayHost).setRelayPort(Integer.parseInt(relayPort)).
-                setClientLogin("gmmufdcu").
-                setClientPasscode("jVSrX2Ft3_VNgdVX4LKoJlW_NEZ-S8_Y").
-                setSystemLogin("gmmufdcu").
-                setSystemPasscode("jVSrX2Ft3_VNgdVX4LKoJlW_NEZ-S8_Y").
-                setVirtualHost("gmmufdcu");*/
+        config.enableStompBrokerRelay("/topic/").setRelayHost(relayHost).setRelayPort(Integer.parseInt(relayPort)).
+                setClientLogin("dwmvuoia").
+                setClientPasscode("sNnf7ADSvIHcU3CgfUlDK7OOBlIQrk_9").
+                setSystemLogin("dwmvuoia").
+                setSystemPasscode("sNnf7ADSvIHcU3CgfUlDK7OOBlIQrk_9").
+                setVirtualHost("dwmvuoia");
         config.setApplicationDestinationPrefixes("/app");
     }
     

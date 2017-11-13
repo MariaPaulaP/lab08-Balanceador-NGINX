@@ -17,6 +17,7 @@
 //NOTA: los comentarios no llevan acentos para evitar conflictos de codificacion
 package edu.eci.arsw.collabhangman.services;
 
+import edu.eci.arsw.collabhangman.cache.redis.GameStateRedisCache;
 import java.util.Random;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,7 +39,7 @@ public class GameServices {
    
     //cache con los datos volatiles del juego
     @Autowired
-    GameStateCache cache;
+    GameStateRedisCache cache;
     
     //repositorios (capa de persistencia)
     @Autowired
@@ -48,7 +49,7 @@ public class GameServices {
     WordsRepository wordsRepository;
 
    
-    private Random random;
+    private final Random random;
 
     public GameServices() {
         random=new Random(System.currentTimeMillis());
