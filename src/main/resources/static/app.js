@@ -29,8 +29,10 @@ var app = (function () {
 
             var socket = new SockJS('/stompendpoint');
             stompClient = Stomp.over(socket);
-            stompClient.connect({}, function (frame) {
-
+            //configuracion activeQM
+            //stompClient.connect({}, function (frame) {
+            //configuracion rabitQM
+            stompClient.connect("dwmvuoia", "sNnf7ADSvIHcU3CgfUlDK7OOBlIQrk_9" ,function (frame) {
                 console.log('Connected: ' + frame);
 
                 //subscriptions
